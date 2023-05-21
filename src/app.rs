@@ -1,3 +1,4 @@
+use crate::components::NavBar;
 use crate::pages::{About, Count, Index};
 use leptos::*;
 use leptos_meta::*;
@@ -18,6 +19,7 @@ pub fn App(cx: Scope) -> impl IntoView {
 
         // content for this welcome page
         <Router>
+            <NavBar />
             <main>
                 <Routes>
                 <Route path="/" view=|cx| view! { cx, <Index /> }/>
